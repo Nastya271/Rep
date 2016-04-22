@@ -21,5 +21,7 @@ int main(int argc, char **argv)
 	data->x1 = 0;
 	data->x2 = 0;
 	
+	radical(data, &flg);
+	
 	return 0;
 }
