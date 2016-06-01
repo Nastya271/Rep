@@ -1,17 +1,13 @@
-all: main.o diskr.o radical.o
-	gcc -Wall -o obj/main obj/main.o obj/diskr.o
+all: main.o lib.o
+	gcc -Wall -o obj/main obj/main.o obj/lib.o
 
-main.o: src/main.c
-	gcc -c src/main.c
+main.o: Lab/main.cpp
+	gcc -c Lab/main.cpp
 	mv main.o obj/
 
-diskr.o: src/diskr.c
-	gcc -c src/diskr.c
-	mv diskr.o obj/
-
-radical.o: src/radical.c
-	gcc -c src/radical.c
-	mv radical.o obj/
+lib.o: Lab/lib.cpp
+	gcc -c Lab/lib.cpp
+	mv lib.o obj/
 
 .PHONY: clean
 
