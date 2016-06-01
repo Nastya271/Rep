@@ -7,5 +7,12 @@ int main ()
 	float x1, x2;
 	int count = 0;
 	
+	printf("Input A: ");
+	scanf("%f", &a); 
+	printf ("Input B: "); 
+	scanf("%f", &b); 
+	printf("Input C: ");
+	scanf("%f", &c); 
+	
 	return 0; 
 }
