@@ -1,15 +1,14 @@
-all: main.o lib.o
-	gcc -Wall -o obj/main obj/main.o obj/lib.o
+bin/main: obj/main.o obj/lib.o
+	gcc -o  bin/main obj/main.o obj/lib.o -lm
 
-main.o: Lab/main.cpp
-	gcc -c Lab/main.cpp
-	mv main.o obj/
+obj/main.o: Lab/main.c
+	gcc -o obj/main.o -c Lab/main.c
 
-lib.o: Lab/lib.cpp
-	gcc -c Lab/lib.cpp
-	mv lib.o obj/
+obj/lib.o: Lab/lib.c
+	gcc -o obj/lib.o -c Lab/lib.c 
 
 .PHONY: clean
 
 clean:
 	rm ./obj/*
+	rm ./bin/*
