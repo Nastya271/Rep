@@ -6,6 +6,9 @@ obj/main.o: Lab/main.c
 
 obj/lib.o: Lab/lib.c
 	gcc -o obj/lib.o -c Lab/lib.c 
+	
+bin/test: test/unit_test.c
+	gcc -o bin/test test/unit_test.c -lm
 
 .PHONY: clean
 
